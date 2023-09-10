@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
+import logo from "../assets/logo_lg.svg";
+import plusIcon from "../assets/plus 1.png";
 const { VITE_APP_HOST } = import.meta.env;
 
 function TodoList() {
@@ -196,14 +198,9 @@ function TodoList() {
   return (
     <div id="todoListPage" className="bg-half">
       <nav>
-        <h1>
-          <a
-            href="/todoList"
-            style={{ backgroundImage: 'url("/logo (2).svg")' }}
-          >
-            ONLINE TODO LIST
-          </a>
-        </h1>
+        <div>
+          <img src={logo} alt="" />
+        </div>
         <ul>
           <li className="todo_sm">
             <a href="/todoList">
@@ -228,7 +225,7 @@ function TodoList() {
               onKeyDown={(e) => handleKeyDown(e)}
             />
             <button type="button" onClick={() => addTodo()}>
-              <i className="fa fa-plus"></i>
+              <img src={plusIcon} alt="" />
             </button>
           </div>
           <div className="todoList_list">

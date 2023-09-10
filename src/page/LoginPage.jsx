@@ -2,6 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import logoLg from "../assets/logo_lg.svg";
+import leftImg from "../assets/left.svg";
+
 const { VITE_APP_HOST } = import.meta.env;
 
 function Login() {
@@ -41,10 +44,8 @@ function Login() {
     <div id="loginPage" className="bg-yellow">
       <div className="container loginPage vhContainer ">
         <div className="side">
-          <a href="/react-final-work/#">
-            <img className="logoImg" src="/logo_lg.svg" alt="" />
-          </a>
-          <img className="d-m-n" src="/left.svg" alt="workImg" />
+          <img className="logoImg" src={logoLg} alt="Logo" />
+          <img className="d-m-n" src={leftImg} alt="LeftImg" />
         </div>
         <div>
           <form className="formControls" action="index.html">
