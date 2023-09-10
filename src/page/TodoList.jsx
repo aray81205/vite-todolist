@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import logo from "../assets/logo_lg.svg";
 import plusIcon from "../assets/plus 1.png";
+import crossIcon from "../assets/cross-gray.svg";
 const { VITE_APP_HOST } = import.meta.env;
 
 function TodoList() {
@@ -203,7 +204,7 @@ function TodoList() {
         </div>
         <ul>
           <li className="todo_sm">
-            <a href="/todoList">
+            <a href="/todolist">
               <span>{nickname}的待辦</span>
             </a>
           </li>
@@ -281,7 +282,7 @@ function TodoList() {
                         <span>{item.content}</span>
                       </label>
                       <button type="button" onClick={() => removeTodo(item)}>
-                        <i className="fa fa-times"></i>
+                        <img src={crossIcon} alt="" />
                       </button>
                     </li>
                   );
